@@ -11,6 +11,7 @@ router.get('/all-users', (req, res) => {
 
 // get one user based on id number
 router.get('/single-user/:id', (req, res) => {
+  console.log(req.params.id);
   let foundUser = users.filter((user) => {
     if (user.id === req.params.id) {
       return res.status(200).json({ confirmation: 'success', user });
