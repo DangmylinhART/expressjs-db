@@ -7,7 +7,8 @@ require('dotenv').config();
 const userRoutes = require('./routes/userRoutes');
 
 const port = process.env.PORT || 3000;
-//general middleware
+
+//logging middleware
 app.use(morgan('dev'));
 
 //middleware for POST request
